@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Установка умных замков - Квиз</title>
+    <meta
+      name="description"
+      content="Подберите решение для установки умного замка за 1 минуту и получите консультацию специалиста."
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header reveal">
+      <div class="container header__inner">
+        <a class="logo" href="#" aria-label="SmartGuard">
+          <i class="fa-solid fa-lock"></i>
+          <span>SmartGuard</span>
+        </a>
+        <button class="btn btn--ghost" type="button" id="callback-btn">
+          <i class="fa-solid fa-phone"></i>
+          <span>Обратный звонок</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__content">
+          <p class="eyebrow">Электросталь</p>
+          <h1 class="hero__title" data-hero-tilt>Интеллектуальный климат. Профессиональный монтаж.</h1>
+          <p class="hero__subtitle" data-hero-tilt>
+            Установка кондиционеров в Электростали с гарантией 5 лет. Узнайте точную
+            стоимость за 1 минуту, пройдя короткий тест.
+          </p>
+          <a class="btn btn--primary" href="#quiz">Пройти мини-квиз</a>
+        </div>
+      </section>
+
+      <section class="quiz reveal" id="quiz">
+        <div class="container">
+          <div class="quiz__header">
+            <h2>Подберем замок под вашу задачу</h2>
+            <p>Это займет меньше минуты</p>
+          </div>
+
+          <div class="quiz__progress-wrap" aria-live="polite">
+            <div class="quiz__progress-meta">
+              <span id="quiz-step-text">Вопрос 1 из 3</span>
+              <span id="quiz-progress-percent">33%</span>
+            </div>
+            <div class="quiz__progress-bar">
+              <div class="quiz__progress-fill" id="quiz-progress-fill"></div>
+            </div>
+          </div>
+
+          <div class="quiz__card">
+            <form id="quiz-form">
+              <fieldset class="quiz__step is-active" data-step="0">
+                <legend>1. Тип объекта</legend>
+                <label><input type="radio" name="objectType" value="Квартира" /> Квартира</label>
+                <label><input type="radio" name="objectType" value="Частный дом" /> Частный дом</label>
+                <label><input type="radio" name="objectType" value="Офис" /> Офис</label>
+              </fieldset>
+
+              <fieldset class="quiz__step" data-step="1">
+                <legend>2. Какой уровень защиты нужен?</legend>
+                <label><input type="radio" name="securityLevel" value="Базовый" /> Базовый</label>
+                <label><input type="radio" name="securityLevel" value="Продвинутый" /> Продвинутый</label>
+                <label><input type="radio" name="securityLevel" value="Максимальный" /> Максимальный</label>
+              </fieldset>
+
+              <fieldset class="quiz__step" data-step="2">
+                <legend>3. Когда хотите установить?</legend>
+                <label><input type="radio" name="installTime" value="Сегодня-завтра" /> Сегодня-завтра</label>
+                <label><input type="radio" name="installTime" value="На этой неделе" /> На этой неделе</label>
+                <label><input type="radio" name="installTime" value="Планирую позже" /> Планирую позже</label>
+              </fieldset>
+
+              <div class="quiz__actions">
+                <button class="btn btn--ghost" type="button" id="quiz-prev" disabled>Назад</button>
+                <button class="btn btn--primary" type="button" id="quiz-next">Далее</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="features reveal">
+        <div class="container">
+          <h2>Почему нас выбирают</h2>
+          <div class="features__grid">
+            <article class="feature-card">
+              <i class="fa-solid fa-user-shield"></i>
+              <h3>Сертифицированные мастера</h3>
+              <p>Работаем по стандартам производителей и даем гарантию на монтаж.</p>
+            </article>
+            <article class="feature-card">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <h3>Управление со смартфона</h3>
+              <p>Настроим удаленный доступ, уведомления и временные цифровые ключи.</p>
+            </article>
+            <article class="feature-card">
+              <i class="fa-solid fa-bolt"></i>
+              <h3>Установка за 90 минут</h3>
+              <p>Приезжаем с нужным оборудованием и не затягиваем сроки.</p>
+            </article>
+            <article class="feature-card">
+              <i class="fa-solid fa-headset"></i>
+              <h3>Поддержка 7 дней в неделю</h3>
+              <p>Поможем с настройками и оперативно решим вопросы после установки.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact reveal" id="contact">
+        <div class="container contact__wrap">
+          <div class="contact__text">
+            <h2>Получите точный расчет за 15 минут</h2>
+            <p>Оставьте контакт, и инженер перезвонит с лучшим решением под ваш объект.</p>
+          </div>
+          <form class="contact__form" id="lead-form" novalidate>
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Ваше имя" />
+
+            <label for="phone">Телефон</label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="+7 (___) ___-__-__"
+              inputmode="tel"
+              required
+            />
+            <span class="error-text" id="phone-error" aria-live="polite"></span>
+
+            <button class="btn btn--primary btn--full" type="submit">Получить консультацию</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="success-modal" aria-hidden="true" role="dialog" aria-modal="true">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__dialog">
+        <button class="modal__close" type="button" data-close-modal aria-label="Закрыть">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3>Спасибо!</h3>
+        <p>Мы свяжемся с вами в течение 15 минут.</p>
+        <button class="btn btn--primary" type="button" data-close-modal>Отлично</button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
